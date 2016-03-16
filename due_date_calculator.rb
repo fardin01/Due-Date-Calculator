@@ -22,7 +22,6 @@ class DueDateCalculator
 				@date = next_business_day(@date)
 			end
 			deadline = @date.change(hour: 9) + remaining_hours.hours
-			puts deadline
 		end
 	end
 
