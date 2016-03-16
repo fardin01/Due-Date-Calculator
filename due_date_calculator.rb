@@ -27,7 +27,7 @@ class DueDateCalculator
 
 	def next_business_day(date)
 	  date += 1
-	  while (date.saturday?) || (date.sunday?) || HOLIDAYS.include?(date.to_date) do
+	  while (date.saturday?) || (date.sunday?) || HOLIDAYS.include?(date) do
 	    date = date.next_day.change(hour: 9)
 	  end   
 	  date
